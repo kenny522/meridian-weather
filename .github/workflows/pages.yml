@@ -26,6 +26,10 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - run: npm install
       - run: npx next build
       - uses: actions/upload-pages-artifact@v3
